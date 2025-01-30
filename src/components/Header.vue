@@ -1,12 +1,12 @@
 <template>
-  <header class="flex flex-col justify-between">
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <header class="flex flex-col justify-between w-full h-60 bg-gray-800 text-white">
+    <img alt="Vue logo" class="rouned-lg" src="@/assets/logo.svg" width="60" height="60" />
 
-    <div class="wrapper">
+    <div class="flex flex-col justify-between">
       <Banner msg="Weather forecast protect you from bad weather!" />
-
-      <nav>
+      <nav class="flex justify-end space-x-4">
         <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/weather">Weather</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
