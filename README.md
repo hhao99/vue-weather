@@ -19,15 +19,12 @@ pnpm i -D tailwindcss @tailwindcss/vite
 
 and then update the vite configure
 
-```json
-...
+```js
+// ...
 import tailwindcss from '@tailwindcss/vite'
 
-...
-plugins: [
-    ...
-    tailwindcss(),
-]
+//...
+plugins: [...tailwindcss()]
 ```
 
 now you can use tailwindcss now, but you need update the default css to use tailwindcss
