@@ -1,64 +1,38 @@
-# w1
+# Weather App with Vue
 
-This template should help get you started developing with Vue 3 in Vite.
+# Start the Project
 
-## Recommended IDE Setup
+Create the vue application with vue-cli
+'''bash
+pnpm create vue weather
+'''
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+We will use vue with typescript and add jsx support, and we will add vue-router and pinia library to support route and state management.
 
-## Type Support for `.vue` Imports in TS
+# Update the css framework
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+Tailwindcss v4 is more performant and easy to configure.
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-bun install
+```bash
+pnpm i -D tailwindcss @tailwindcss/vite
 ```
 
-### Compile and Hot-Reload for Development
+and then update the vite configure
 
-```sh
-bun dev
+```json
+...
+import tailwindcss from '@tailwindcss/vite'
+
+...
+plugins: [
+    ...
+    tailwindcss(),
+]
 ```
 
-### Type-Check, Compile and Minify for Production
+now you can use tailwindcss now, but you need update the default css to use tailwindcss
 
-```sh
-bun run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-bun test:unit
-```
-
-### Run End-to-End Tests with [Playwright](https://playwright.dev)
-
-```sh
-# Install browsers for the first run
-npx playwright install
-
-# When testing on CI, must build the project first
-bun run build
-
-# Runs the end-to-end tests
-bun test:e2e
-# Runs the tests only on Chromium
-bun test:e2e --project=chromium
-# Runs the tests of a specific file
-bun test:e2e tests/example.spec.ts
-# Runs the tests in debug mode
-bun test:e2e --debug
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-bun lint
+```css
+// .src/assets/main.css
+@import 'tailwindcss'
 ```
