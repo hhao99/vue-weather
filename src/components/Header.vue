@@ -1,6 +1,6 @@
 <template>
   <header class="flex flex-col justify-between w-full h-60 bg-gray-800 text-white">
-    <img alt="Vue logo" class="rouned-lg" src="@/assets/logo.svg" width="60" height="60" />
+    <img alt="Vue logo" class="rouned-lg" src="@/assets/logo.svg" width="30" height="30" />
 
     <div class="flex flex-col justify-between">
       <Banner msg="Weather forecast protect you from bad weather!" />
