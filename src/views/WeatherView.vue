@@ -1,6 +1,5 @@
 <template>
-  <div class="flex flex-col justify-center items-center h-screen">
-    <h1 class="text-red-800 text-3xl">This is Weather page</h1>
+  <div class="container w-full bg-blue-50 dark:bg-blue-900 dark:text-white h-screen p-4">
     <WeatherApp />
   </div>
 </template>
