@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import WeatherInfo from './WeatherInfo.vue'
 const url = 'https://api.weatherbit.io/v2.0/current'
 const apiKey = 'a8e27a3b5a86405995003b245d10bec5'
 const city = ref('winnipeg')
@@ -25,16 +26,6 @@ const fetchWeather = async () => {
       />
     </div>
 
-    <div v-if="data">
-      <h1>Weather of City: {{ data.city_name }}, {{ data.country_code }}</h1>
-      <p>updated at: {{ data.ob_time }}</p>
-      <ul>
-        <li>Temperature: {{ data.temp }}, feel Like {{ data.app_temp }}</li>
-        <li>Pressure: {{ data.pres }}</li>
-        <li>Wind speed: {{ data.wind_spd }} m/s.</li>
-        <li>Relative Humidity: {{ data.rh }}%.</li>
-        <li>Cloud coverate {{ data.clouds }}%.</li>
-      </ul>
-    </div>
+    <WeatherInfo :data />
   </main>
 </template>
